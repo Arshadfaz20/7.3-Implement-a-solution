@@ -1,0 +1,25 @@
+int motion1;
+int motion2;  
+int motion3;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(6, OUTPUT);
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
+  pinMode(10, INPUT);
+}
+
+void loop() {
+
+  
+  if (digitalRead(8)==HIGH or digitalRead(9)==HIGH or digitalRead(10)==HIGH )
+  {
+    pinMode (6, HIGH);
+  }
+  else
+  {
+    pinMode (6,LOW);
+  }
+  delay(500);
+}
